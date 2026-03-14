@@ -5,7 +5,6 @@ void main() {
     Scanner in = new Scanner(System.in);
     String playA;
     String playB;
-    String choice;
     String trash = "";
     boolean done = false;
 
@@ -41,5 +40,32 @@ void main() {
 
     } while (!done);
 
-
+    if (playA.equalsIgnoreCase("R") && playB.equalsIgnoreCase("P"))
+    {
+        System.out.println("Paper covers Rock, Player B wins!");
+    }
+    else if (playA.equalsIgnoreCase("P") && playB.equalsIgnoreCase("R"))
+    {
+        System.out.println("Paper covers Rock, Player A wins!");
+    }
+    else if (playA.equalsIgnoreCase("P") && playB.equalsIgnoreCase("S"))
+    {
+       System.out.println("Scissors cuts Paper, Player B wins!");
+    }
+    else if (playA.equalsIgnoreCase("S") && playB.equalsIgnoreCase("P"))
+    {
+        System.out.println("Scissors cuts Paper, Player A wins!");
+    }
+    else if (playA.equalsIgnoreCase("S") && playB.equalsIgnoreCase("R"))
+    {
+        System.out.println("Rock breaks Scissors, Player B wins!");
+    }
+    else if (playA.equalsIgnoreCase("R") && playB.equalsIgnoreCase("S"))
+    {
+        System.out.println("Rock breaks Scissors, Player A wins!");
+    }
+    else if (playA.equalsIgnoreCase(playB))
+    {
+        System.out.println(playA + " vs " + playB + " it's a tie!");
+    }
 }
